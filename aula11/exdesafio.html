@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País de Origem</title>
+</head>
+<body>
+    <h1>País de Origem</h1>
+    Qual País você nasceu?<input type="text" name="txtpaís" id="txtpaís">
+    <input type="button" value="verificar" onclick="verify()">
+    <div id="res">
+
+    </div>
+    <script>
+        function verify() {
+            var país = window.document.getElementById("txtpaís");
+            var res = window.document.getElementById("res");
+            var nação = (txtpaís.value);
+            res.innerHTML = `<p>O País que você nasceu é <b>${nação}</b></p>`;
+            
+            if (nação == "Brasil" || nação == "brasil") {
+                res.innerHTML += "<p>Você é Brasileiro</p>";
+            } else {
+                res.innerHTML += "Você é Estrangeiro";
+            }
+        }
+    </script>
+</body>
+</html>
